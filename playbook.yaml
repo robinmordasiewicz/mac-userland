@@ -11,6 +11,7 @@
       - slack
       - vagrant
       - visual-studio-code
+      - whatsapp
     brew_packages:
       - asciinema
       - autoconf
