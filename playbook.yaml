@@ -57,6 +57,7 @@
     - role: gantsign.oh-my-zsh
       users:
         - username: "{{ ansible_user_id }}"
+          sudo: yes
           oh_my_zsh:
             theme: agnoster
             write_zshrc: true
@@ -65,6 +66,9 @@
               - zsh-syntax-highlighting
               - zsh-autosuggestions
               - zsh-dircolors-solarized
+              - zsh-interactive-cd
+              - zsh-navigation-tools
+              - zsh-vi-mode
               - terraform
               - docker
               - kubectl
@@ -78,11 +82,7 @@
               - history
               - jsontools
               - sudo
-              - ubuntu
-              - zsh-interactive-cd
-              - zsh-navigation-tools
               - vscode
-              - zsh-vi-mode
               - brew
               - macos
               - z
@@ -269,3 +269,13 @@
         dest: "{{ HOME }}/.gitignore"
         backup: yes
         mode: 0640
+    - name: Ensure .vim/colors exists
+      file:
+        path: "{{ HOME }}/.vim/colors"
+        recurse: true
+        state: directory
+    - name: Download vim theme
+      get_url:
+        url: https://raw.githubusercontent.com/crusoexia/vim-monokai/master/colors/monokai.vim
+        dest: "{{ HOME }}/.vim/colors/monokai.vim"
+        mode: '0640'
