@@ -9,9 +9,22 @@
       - google-chrome
       - iterm2
       - slack
+      - slack-cli
       - vagrant
       - visual-studio-code
       - whatsapp
+      - snagit
+      - balenaetcher
+      - github
+      - messenger
+      - minishift
+      - paw
+      - raspberry-pi-imager
+      - shotcut
+      - vincelwt-chatgpt
+      - webex-meetings
+      - xquartz
+      - zoom
     brew_packages:
       - asciinema
       - autoconf
@@ -280,3 +293,46 @@
         url: https://raw.githubusercontent.com/crusoexia/vim-monokai/master/colors/monokai.vim
         dest: "{{ HOME }}/.vim/colors/monokai.vim"
         mode: '0640'
+
+    - osx_defaults:
+        domain: com.apple.dock
+        host: currentHost
+        key: autohide
+        type: bool
+        value: true
+
+    - osx_defaults:
+        domain: com.apple.Safari
+        host: currentHost
+        key: HomePage
+        type: string
+        value: "https://www.fortinet.com"
+
+    - osx_defaults:
+        domain: com.apple.Safari
+        host: currentHost
+        key: IncludeDevelopMenu
+        type: bool
+        value: true
+
+    - osx_defaults:
+        domain: com.apple.Safari
+        host: currentHost
+        key: WebKitDeveloperExtrasEnabledPreferenceKey
+        type: bool
+        value: true
+
+    - osx_defaults:
+        domain: com.apple.Safari
+        host: currentHost
+        key: com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled
+        type: bool
+        value: true
+
+    - osx_defaults:
+        domain: NSGlobalDomain
+        host: currentHost
+        key: WebKitDeveloperExtras
+        type: bool
+        value: true
+
