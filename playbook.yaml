@@ -303,14 +303,14 @@
     - osx_defaults:
         domain: com.apple.Safari
         host: currentHost
-        key: HomePage
-        type: string
-        value: "https://www.fortinet.com"
+        key: IncludeDevelopMenu
+        type: bool
+        value: true
 
     - osx_defaults:
         domain: com.apple.Safari
         host: currentHost
-        key: IncludeDevelopMenu
+        key: IncludeInternalDebugMenu
         type: bool
         value: true
 
@@ -334,4 +334,39 @@
         key: WebKitDeveloperExtras
         type: bool
         value: true
+
+    - osx_defaults:
+        domain: com.apple.Safari
+        host: currentHost
+        key: ShowStatusBar
+        type: bool
+        value: true
+
+    - osx_defaults:
+        domain: com.apple.Safari
+        host: currentHost
+        key: ShowOverlayStatusBar
+        type: bool
+        value: true
+
+    - osx_defaults:
+        domain: com.apple.Safari
+        host: currentHost
+        key: ShowFullURLInSmartSearchField
+        type: bool
+        value: true
+
+    - osx_defaults:
+        domain: com.apple.Safari
+        host: currentHost
+        key: AlwaysRestoreSessionAtLaunch
+        type: bool
+        value: true
+
+    - osx_defaults:
+        domain: com.apple.Safari
+        host: currentHost
+        key: HomePage
+        type: string
+        value: "https://www.fortinet.com"
 
