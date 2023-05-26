@@ -28,6 +28,7 @@
       - asciinema
       - autoconf
       - byobu
+      - cdrtools
       - consul
       - docker-compose
       - docker-machine
