@@ -5,23 +5,24 @@
   vars:
     HOME: "{{ lookup('env', 'HOME') }}"
     brew_cask_packages:
+      - balenaetcher
       - docker
+      - github
       - google-chrome
       - iterm2
-      - slack
-      - slack-cli
-      - vagrant
-      - visual-studio-code
-      - whatsapp
-      - balenaetcher
-      - github
       - messenger
       - minishift
+      - multipass
       - paw
       - raspberry-pi-imager
       - shotcut
+      - slack
+      - slack-cli
+      - vagrant
       - vincelwt-chatgpt
+      - visual-studio-code
       - webex-meetings
+      - whatsapp
       - xquartz
       - zoom
     brew_packages:
@@ -40,7 +41,6 @@
       - jq
       - libxslt
       - lolcat
-      - multipass
       - nmap
       - nomad
       - openssl
