@@ -57,6 +57,7 @@
       - vault
       - virt-manager
       - wget
+      - xorriso
       - yamllint
       - zsh
       - zsh-syntax-highlighting
