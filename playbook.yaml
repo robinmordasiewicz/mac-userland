@@ -28,6 +28,7 @@
     brew_packages:
       - asciinema
       - autoconf
+      - azure-cli
       - byobu
       - cdrtools
       - consul
