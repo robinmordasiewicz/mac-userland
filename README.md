@@ -17,3 +17,8 @@ https://github.com/lysyi3m/macos-terminal-themes.git
 Install Tango Dark theme
 
 # 
+
+# Install Docker
+
+softwareupdate --install-rosetta
+
