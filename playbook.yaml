@@ -34,6 +34,7 @@
       - consul
       - docker-compose
       - docker-machine
+      - dos2unix
       - doxygen
       - git
       - git-lfs
