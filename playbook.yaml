@@ -190,6 +190,7 @@
           - {name: "core.editor",   value: "vim" }
           - {name: "core.excludesfile", value: "{{ HOME }}/.gitignore"}
           - {name: "init.defaultBranch", value: "main" }
+          - {name: "push.autoSetupRemote", value: "true" }
     - name: byobu preferences directory
       file:
         path: "{{ HOME }}/.byobu"
