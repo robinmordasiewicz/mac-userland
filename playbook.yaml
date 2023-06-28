@@ -7,8 +7,15 @@
     brew_cask_packages:
       - balenaetcher
       - docker
+      - font-fira-mono-nerd-font
+      - font-hack-nerd-font
+      - font-meslo-lg-nerd-font
+      - font-mononoki-nerd-font
+      - font-sauce-code-pro-nerd-font
+      - font-terminess-ttf-nerd-font
       - github
       - google-chrome
+      - google-cloud-sdk
       - iterm2
       - messenger
       - minishift
@@ -29,24 +36,31 @@
       - asciinema
       - autoconf
       - azure-cli
+      - bat
       - byobu
+      - calc
       - cdrtools
       - consul
       - docker-compose
       - docker-machine
       - dos2unix
       - doxygen
+      - exa
       - git
       - git-lfs
       - gh
+      - gifsicle
+      - gifski
       - go
       - hugo
+      - imagemagick
       - jq
       - libxslt
       - lolcat
       - nmap
       - nomad
       - openssl
+      - optipng
       - packer
       - pyenv
       - python
@@ -54,6 +68,8 @@
       - ruby-build
       - ssh-copy-id
       - speedtest-cli
+      - sphinx-doc
+      - starship
       - terraform
       - terraform-inventory
       - tmux
@@ -82,17 +98,12 @@
             write_zshrc: true
             plugins:
               - azure-cli
+              - ansible
+              - exa-zsh
               - git
-              - zsh-syntax-highlighting
-              - zsh-autosuggestions
-              - zsh-dircolors-solarized
-              - zsh-interactive-cd
-              - zsh-navigation-tools
-              - zsh-vi-mode
               - terraform
               - docker
               - kubectl
-              - ansible
               - colorize
               - cp
               - fzf
@@ -105,9 +116,15 @@
               - vscode
               - brew
               - macos
-              - z
               - packer
               - vault
+              - z
+              - zsh-syntax-highlighting
+              - zsh-autosuggestions
+              - zsh-dircolors-solarized
+              - zsh-interactive-cd
+              - zsh-navigation-tools
+              - zsh-vi-mode
 
   pre_tasks:
     - name: Ensuring Homebrew Is Installed
@@ -140,6 +157,10 @@
       register: result
       until: result is successful
       when: homebrew_check.stat.exists
+
+    - name: Tap a Homebrew repository, state present
+      homebrew_tap:
+        name: homebrew/cask-fonts
 
     - name: Installing Homebrew Cask Packages
       homebrew_cask:
@@ -245,6 +266,13 @@
         force: yes
       register: azurecli
       changed_when: ( azurecli.remote_url_changed is not defined or azurecli.remote_url_changed )
+    - name: Install zsh exa
+      ansible.builtin.git:
+        repo: https://github.com/MohamedElashri/exa-zsh.git
+        dest: "{{ HOME }}/.oh-my-zsh/plugins/exa-zsh"
+        force: yes
+      register: zshexa
+      changed_when: ( zshexa.remote_url_changed is not defined or zshexa.remote_url_changed )
     - name: Ensure .vim/{autoload,bundle} directory exists
       file:
         path: "{{ item }}"
