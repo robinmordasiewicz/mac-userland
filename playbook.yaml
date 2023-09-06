@@ -28,6 +28,7 @@
       - vagrant
       - vincelwt-chatgpt
       - visual-studio-code
+      - watch
       - webex-meetings
       - whatsapp
       - xquartz
@@ -94,7 +95,7 @@
         - username: "{{ ansible_user_id }}"
           sudo: yes
           oh_my_zsh:
-            theme: agnoster
+            theme: powerlevel10k
             write_zshrc: true
             plugins:
               - azure-cli
@@ -230,7 +231,14 @@
         dest: "{{ HOME }}/.oh-my-zsh/plugins/zsh-vi-mode"
         force: yes
       register: vimode
-      changed_when: ( vimode.remote_url_changed is not defined or vimode.remote_url_changed ) 
+      changed_when: ( vimode.remote_url_changed is not defined or vimode.remote_url_changed )
+    - name: Install powerlevel10k
+      ansible.builtin.git:
+        repo: https://github.com/romkatv/powerlevel10k.git
+        dest: "{{ HOME }}/.oh-my-zsh/custom/themes/powerlevel10k"
+        force: yes
+      register: powerlevel
+      changed_when: ( powerlevel.remote_url_changed is not defined or powerlevel.remote_url_changed ) 
     - name: Install zsh autosuggestions
       ansible.builtin.git:
         repo: https://github.com/zsh-users/zsh-autosuggestions.git
