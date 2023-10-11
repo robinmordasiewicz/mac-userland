@@ -41,6 +41,7 @@
       - byobu
       - calc
       - ca-certificates
+      - checkov
       - cdrtools
       - consul
       - docker-compose
@@ -75,6 +76,14 @@
       - sphinx-doc
       - starship
       - terraform
+      - terraform-docs
+      - terragrunt
+      - terrascan
+      - tflint
+      - tfsec
+      - infracost
+      - tfupdate
+      - minamijoyo/hcledit/hcledit
       - terraform-inventory
       - tmux
       - tree
