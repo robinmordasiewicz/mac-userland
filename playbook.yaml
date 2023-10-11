@@ -40,6 +40,7 @@
       - bat
       - byobu
       - calc
+      - ca-certificates
       - cdrtools
       - consul
       - docker-compose
@@ -69,6 +70,7 @@
       - rbenv
       - ruby-build
       - ssh-copy-id
+      - sqlite
       - speedtest-cli
       - sphinx-doc
       - starship
@@ -78,6 +80,7 @@
       - tree
       - vault
       - virt-manager
+      - virtualenv
       - wget
       - xorriso
       - yamllint
