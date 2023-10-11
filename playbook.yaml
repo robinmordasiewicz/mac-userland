@@ -63,6 +63,7 @@
       - openssl
       - optipng
       - packer
+      - pre-commit
       - pyenv
       - python
       - rbenv
