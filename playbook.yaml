@@ -44,6 +44,7 @@
       - checkov
       - cdrtools
       - consul
+      - conftest
       - docker-compose
       - docker-machine
       - dos2unix
