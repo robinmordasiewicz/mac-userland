@@ -45,6 +45,7 @@
       - cdrtools
       - consul
       - conftest
+      - detect-secrets
       - docker-compose
       - docker-machine
       - dos2unix
