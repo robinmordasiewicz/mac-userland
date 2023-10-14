@@ -72,6 +72,7 @@
       - pyenv
       - python
       - rbenv
+      - ripsecrets
       - ruby-build
       - ssh-copy-id
       - sqlite
