@@ -52,6 +52,7 @@
       - exa
       - git
       - git-lfs
+      - gitlint
       - gh
       - gifsicle
       - gifski
