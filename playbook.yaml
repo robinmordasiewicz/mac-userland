@@ -34,6 +34,7 @@
       - xquartz
       - zoom
     brew_packages:
+      - actionlint
       - asciinema
       - autoconf
       - azure-cli
@@ -64,6 +65,7 @@
       - jq
       - libxslt
       - lolcat
+      - markdownlint-cli2
       - nmap
       - nomad
       - opa
@@ -77,6 +79,7 @@
       - rbenv
       - ripsecrets
       - ruby-build
+      - shellcheck
       - ssh-copy-id
       - sqlite
       - speedtest-cli
@@ -100,6 +103,7 @@
       - wget
       - xorriso
       - yamllint
+      - yamlfmt
       - zsh
       - zsh-syntax-highlighting
 
