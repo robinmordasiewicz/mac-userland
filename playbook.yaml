@@ -54,6 +54,7 @@
       - git
       - git-lfs
       - gitlint
+      - gitleaks
       - gh
       - gifsicle
       - gifski
@@ -70,6 +71,7 @@
       - optipng
       - packer
       - pre-commit
+      - prettier
       - pyenv
       - python
       - rbenv
