@@ -22,13 +22,11 @@
       - multipass
       - paw
       - raspberry-pi-imager
-      - shotcut
       - slack
       - slack-cli
       - vagrant
       - vincelwt-chatgpt
       - visual-studio-code
-      - watch
       - webex-meetings
       - whatsapp
       - xquartz
@@ -39,6 +37,7 @@
       - autoconf
       - azure-cli
       - bat
+      - bfg
       - byobu
       - calc
       - ca-certificates
@@ -56,13 +55,19 @@
       - git-lfs
       - gitlint
       - gitleaks
+      - git-secrets
+      - git-filter-repo
       - gh
       - gifsicle
       - gifski
       - go
+      - grype
+      - hadolint
       - hugo
       - imagemagick
+      - ipython
       - jq
+      - jsonlint
       - libxslt
       - lolcat
       - markdownlint-cli2
@@ -85,11 +90,12 @@
       - speedtest-cli
       - sphinx-doc
       - starship
-      - terraform
+      - hashicorp/tap/terraform
       - terraform-docs
       - terragrunt
       - terrascan
       - tflint
+      - trivy
       - tfsec
       - infracost
       - tfupdate
