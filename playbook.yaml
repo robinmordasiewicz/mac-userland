@@ -112,6 +112,7 @@
       - xorriso
       - yamllint
       - yamlfmt
+      - z
       - zsh
       - zsh-syntax-highlighting
 
