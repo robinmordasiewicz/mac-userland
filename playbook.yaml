@@ -5,6 +5,7 @@
   vars:
     HOME: "{{ lookup('env', 'HOME') }}"
     brew_cask_packages:
+      - anaconda
       - balenaetcher
       - docker
       - font-fira-mono-nerd-font
@@ -70,6 +71,7 @@
       - jsonlint
       - libxslt
       - lolcat
+      - lsd
       - markdownlint-cli2
       - nmap
       - nomad
