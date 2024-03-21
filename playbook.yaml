@@ -79,6 +79,7 @@
       - openssl
       - optipng
       - packer
+      - powershell/tap/powershell
       - pre-commit
       - prettier
       - pyenv
